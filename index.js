@@ -235,4 +235,4 @@ function starPattern(){
   console.log(str);
 }
 
-starPattern();
+// starPattern();
