@@ -112,4 +112,127 @@ function halfPyramidWithNumber() {
   }
   console.log(str);
 }
-halfPyramidWithNumber();
+// halfPyramidWithNumber();
+
+
+function butterFlyPattern(){
+  let row = +prompt('Enter number of Rows');
+  let str = '';
+  for(let i=0; i<row; i++){
+    for(let j=0; j<=i; j++){
+      str += '*';
+    }
+    let spaces = 2*row - 2*i-2;
+    for(let j=0;j< spaces; j++){
+      str += ' ';
+    }
+    for(let j=0; j<=i; j++){
+      str += '*';
+    }
+    str += '\n';
+  }
+  for(let i=row-1; i>=0; i--){
+    for(let j=0; j<=i; j++){
+      str += '*';
+    }
+    let spaces = 2*row - 2*i-2;
+    for(let j=0;j< spaces; j++){
+      str += ' ';
+    }
+    for(let j=0; j<=i; j++){
+      str += '*';
+    }
+    str += '\n';
+  }
+  console.log(str);
+}
+
+// butterFlyPattern();
+
+
+
+
+function pyramidPattern(){
+  let row = +prompt('Enter the number of Rows');
+  let str = '';
+  for(let i=1; i<=row; i++){
+    for(let j=1; j<=row-i;j++){
+        str=str +' ';
+    }
+    for(let j=1;j<=i;j++){
+      str =str + '* ';
+    }
+    str+='\n'
+  }
+  console.log(str);
+}
+// pyramidPattern()
+
+
+function rhombusPattern(){
+  let str ="";
+  let rows = +prompt('Enter the number of Rows');
+  for(let i =1; i<=rows;i++){
+    for(let j=1;j<=rows-i;j++){
+      str+=" ";
+    }
+    for(let j=1;j<=rows;j++){
+      str+='*'
+    }
+    str+='\n';
+  }
+  console.log(str);
+}
+// rhombusPattern();
+
+function palindromicPattern(){
+  let str ='';
+  let rows = +prompt('Enter the number of Rows');
+  for(let i=1;i<=rows;i++){
+    for(let j=1;j<=rows-i;j++){
+      str+="  ";
+    }
+    for(let j=i;j>=1;j--){
+      str=str+j +' ';
+    }
+    for(let j=2;j<=i;j++){
+      str+=j +' ';
+    }
+    str=str+'\n';
+  }
+  console.log(str);
+}
+
+// palindromicPattern();
+
+function starPattern(){
+  let str=''; 
+  let rows= +prompt('Enter the number of rows');
+  for(let i=1;i<=rows;i++){
+    for(let j=rows-i;j>=1;j--){
+      str+=' ';
+    }
+    for(let j=1;j<=i;j++){
+      str=str+'*';
+    }
+    for(let j=2;j<=i;j++){
+      str+='*'
+    }
+    str=str+ '\n';
+  }
+  for(let i=rows;i>=1;i--){
+    for(let j=rows-i;j>=1;j--){
+      str+=' ';
+    }
+    for(let j=1;j<=i;j++){
+      str=str+'*';
+    }
+    for(let j=2;j<=i;j++){
+      str+='*'
+    }
+    str=str+ '\n';
+  }
+  console.log(str);
+}
+
+starPattern();
